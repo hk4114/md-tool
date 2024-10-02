@@ -3,13 +3,11 @@ import { Emoji, ExportPDF, Mark } from '@vavt/v3-extension'
 import { ElForm, ElFormItem, ElOption, ElSelect } from 'element-plus'
 import { MdEditor } from 'md-editor-v3'
 import { reactive, ref } from 'vue'
-import { toolbars } from './config'
 
 const state = reactive({
   text: ``,
   previewTheme: `default`,
   codeTheme: `atom`,
-  toolbars,
   previewThemeList: [`default`, `github`, `vuepress`, `mk-cute`, `smart-blue`, `cyanosis`],
   codeThemeList: [
     `atom`,
@@ -60,7 +58,6 @@ const editorRef = ref()
       :editor-id="editorId"
       :preview-theme="state.previewTheme"
       :code-theme="state.codeTheme"
-      :toolbars="state.toolbars"
       :footers="['markdownTotal', '=', 0, 'scrollSwitch']"
       show-code-row-number
       auto-detect-code

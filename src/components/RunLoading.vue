@@ -37,7 +37,6 @@ onMounted(() => {
   background-color: var(--el-bg-color-page);
 
   &::before {
-    content: url('../assets/images/favicon.png');
     width: 100px;
     height: 100px;
     margin-bottom: 26px;

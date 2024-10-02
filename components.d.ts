@@ -78,7 +78,6 @@ declare module 'vue' {
     ElTag: typeof import('element-plus/es')['ElTag']
     ElUpload: typeof import('element-plus/es')['ElUpload']
     FileDropdown: typeof import('./src/components/CodemirrorEditor/EditorHeader/FileDropdown.vue')['default']
-    HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
     HelpDropdown: typeof import('./src/components/CodemirrorEditor/EditorHeader/HelpDropdown.vue')['default']
     HoverCard: typeof import('./src/components/ui/hover-card/HoverCard.vue')['default']
     HoverCardContent: typeof import('./src/components/ui/hover-card/HoverCardContent.vue')['default']
@@ -124,8 +123,6 @@ declare module 'vue' {
     SelectValue: typeof import('./src/components/ui/select/SelectValue.vue')['default']
     StyleDropdown: typeof import('./src/components/CodemirrorEditor/EditorHeader/StyleDropdown.vue')['default']
     StyleOptionMenu: typeof import('./src/components/CodemirrorEditor/EditorHeader/StyleOptionMenu.vue')['default']
-    TheWelcome: typeof import('./src/components/TheWelcome.vue')['default']
     UploadImgDialog: typeof import('./src/components/CodemirrorEditor/UploadImgDialog.vue')['default']
-    WelcomeItem: typeof import('./src/components/WelcomeItem.vue')['default']
   }
 }

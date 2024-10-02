@@ -1,4 +1,4 @@
-<script setup name="mh">
+<script setup lang="ts" name="mh">
 import { MdPreview } from 'md-editor-v3'
 import { onMounted, ref } from 'vue'
 
@@ -7,8 +7,7 @@ const id = `preview-only`
 const text = ref(``)
 
 onMounted(() => {
-  const md = document.getElementById(`textarea`)
-  text.value = md.value
+  text.value = (document.getElementById(`textarea`) as HTMLInputElement).value
 })
 
 const list = ref([

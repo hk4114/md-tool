@@ -1,8 +1,6 @@
 import { foldGutter } from '@codemirror/language'
 import { lineNumbers } from '@codemirror/view'
 
-import footnote from 'markdown-it-footnote'
-import LinkAttr from 'markdown-it-link-attributes'
 import { config } from 'md-editor-v3'
 
 import { createPinia } from 'pinia'
@@ -53,25 +51,6 @@ config({
         }
       }
       return item
-    })
-    result.push({
-      type: `footnote`,
-      plugin: footnote,
-      options: {
-        backRef: true,
-      },
-    })
-    result.push({
-      type: `linkAttr`,
-      plugin: LinkAttr,
-      options: {
-        matcher(href: string) {
-          return !href.startsWith(`#`)
-        },
-        attrs: {
-          target: `_blank`,
-        },
-      },
     })
     return result
   },
