@@ -54,10 +54,6 @@ Markdown 中的段落就是一行接一行的文本。要创建新段落，只�
 - **链接**：用方括号和圆括号创建链接 `[显示文本](链接地址)`。
 - **图片**：和链接类似，只需在前面加上 `!`，如 `![描述文本](图片链接)`。
 
-[访问 Doocs](https://github.com/doocs)
-
-![doocs](https://cdn-doocs.oss-cn-shenzhen.aliyuncs.com/gh/doocs/md/images/logo-2.png)
-
 轻松实现富媒体内容展示！
 
 > 因微信公众号平台不支持除公众号文章以外的链接，故其他平台的链接，会呈现链接色泽但不能点击。
@@ -173,9 +169,3 @@ Markdown 是一种简单、强大且易于掌握的标记语言，通过学习�
 - [刷掉 90% 候选人的互联网大厂海量数据面试题（附题解 + 方法总结）](https://mp.weixin.qq.com/s/rjGqxUvrEqJNlo09GrT1Dw)
 - [好用！期待已久的文本块功能究竟如何在 Java 13 中发挥作用？](https://mp.weixin.qq.com/s/kalGv5T8AZGxTnLHr2wDsA)
 - [2019 GitHub 开源贡献排行榜新鲜出炉！微软谷歌领头，阿里跻身前 12！](https://mp.weixin.qq.com/s/_q812aGD1b9QvZ2WFI0Qgw)
-
----
-
-<center>
-    <img src="https://cdn-doocs.oss-cn-shenzhen.aliyuncs.com/gh/doocs/md/images/1648303220922-7e14aefa-816e-44c1-8604-ade709ca1c69.png" style="width: 100px;">
-</center>

@@ -7,7 +7,6 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
-    AboutDialog: typeof import('./src/components/CodemirrorEditor/EditorHeader/AboutDialog.vue')['default']
     Button: typeof import('./src/components/ui/button/Button.vue')['default']
     ContextMenu: typeof import('./src/components/ui/context-menu/ContextMenu.vue')['default']
     ContextMenuCheckboxItem: typeof import('./src/components/ui/context-menu/ContextMenuCheckboxItem.vue')['default']
@@ -78,7 +77,6 @@ declare module 'vue' {
     ElTag: typeof import('element-plus/es')['ElTag']
     ElUpload: typeof import('element-plus/es')['ElUpload']
     FileDropdown: typeof import('./src/components/CodemirrorEditor/EditorHeader/FileDropdown.vue')['default']
-    HelpDropdown: typeof import('./src/components/CodemirrorEditor/EditorHeader/HelpDropdown.vue')['default']
     HoverCard: typeof import('./src/components/ui/hover-card/HoverCard.vue')['default']
     HoverCardContent: typeof import('./src/components/ui/hover-card/HoverCardContent.vue')['default']
     HoverCardTrigger: typeof import('./src/components/ui/hover-card/HoverCardTrigger.vue')['default']

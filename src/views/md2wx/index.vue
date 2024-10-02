@@ -482,7 +482,7 @@ onMounted(() => {
 
 <style lang="less" scoped>
 .container {
-  height: 100vh;
+  height: calc(100vh - 100px);
   min-width: 100%;
   padding: 0;
 }
