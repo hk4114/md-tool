@@ -5,29 +5,60 @@ on:
     branches: [main]
   workflow_dispatch:
 
+# 权限设置
+permissions:
+  # 允许读取仓库内容的权限。
+  contents: read
+  # 允许写入 GitHub Pages 的权限。
+  pages: write
+  # 允许写入 id-token 的权限。
+  id-token: write
+
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
-    if: github.repository == 'hk4114/md-tool'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
           persist-credentials: false
 
-      - name: Set up node
-        uses: actions/setup-node@v4
+      # 设置使用 Node.js 版本
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: ${{ matrix.node-version }}
 
+      # 使用 最新的 PNPM
+      # 你也可以指定为具体的版本
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        with:
+          version: latest
+          # version: 9
+          run_install: false
+      - name: 启用Github Pages并读取文档元数据
+        uses: actions/configure-pages@v3
+        # 安装依赖
       - name: Install dependencies
-        run: npm install
+        run: pnpm install --no-frozen-lockfile
 
-      - name: Build
-        run: npm run build
+      - name: Build blog project
+        run: pnpm build
 
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+      - name: 上传项目
+        uses: actions/upload-pages-artifact@v2
         with:
-          branch: gh-pages
-          folder: dist
+          path: dist
+
+  # 部署任务
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v2
